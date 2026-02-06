@@ -1,4 +1,4 @@
-// Elements
+
 const envelope = document.getElementById("envelope-container");
 const letter = document.getElementById("letter-container");
 const noBtn = document.querySelector(".no-btn");
@@ -9,7 +9,7 @@ const catImg = document.getElementById("letter-cat");
 const buttons = document.getElementById("letter-buttons");
 const finalText = document.getElementById("final-text");
 
-// Click Envelope
+// Evento de dar click en la carta probar el out
 
 envelope.addEventListener("click", () => {
     envelope.style.display = "none";
@@ -20,7 +20,7 @@ envelope.addEventListener("click", () => {
     },50);
 });
 
-// Logic to move the NO btn
+// Evento para mover el botón de "NO"
 
 noBtn.addEventListener("mouseover", () => {
     const min = 200;
@@ -35,35 +35,13 @@ noBtn.addEventListener("mouseover", () => {
     noBtn.style.transition = "transform 0.3s ease";
     noBtn.style.transform = `translate(${moveX}px, ${moveY}px)`;
 });
-
-// Logic to make YES btn to grow
-
-// let yesScale = 1;
-
-// yesBtn.style.position = "relative"
-// yesBtn.style.transformOrigin = "center center";
-// yesBtn.style.transition = "transform 0.3s ease";
-
-// noBtn.addEventListener("click", () => {
-//     yesScale += 2;
-
-//     if (yesBtn.style.position !== "fixed") {
-//         yesBtn.style.position = "fixed";
-//         yesBtn.style.top = "50%";
-//         yesBtn.style.left = "50%";
-//         yesBtn.style.transform = `translate(-50%, -50%) scale(${yesScale})`;
-//     }else{
-//         yesBtn.style.transform = `translate(-50%, -50%) scale(${yesScale})`;
-//     }
-// });
-
-// YES is clicked
+// Evento cuando fatis le de click a sí
 
 yesBtn.addEventListener("click", () => {
     title.textContent = "SIIIIIIIIIIIIIIII!";
-
+    //referencia al gif global
     catImg.src = "cat_dance.gif";
-
+    //Instancia de la ventana final
     document.querySelector(".letter-window").classList.add("final");
 
     buttons.style.display = "none";
